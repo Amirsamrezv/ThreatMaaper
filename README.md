@@ -41,3 +41,11 @@ The ThreatMapper Management Console is a container-based application that can be
 ThreatMapper monitors running infrastructure using agentless Cloud Scanner tasks and agent-based Sensor Agents
 
 <h3>The Management Console</h3>
+
+<a href="https://community.deepfence.io/docs/threatmapper/console/" rel="nofollow">deploy the Management Console first</a>
+
+<pre><span class="pl-c"><span class="pl-c">#</span> Docker installation process for ThreatMapper Management Console</span>
+sudo sysctl -w vm.max_map_count=262144 <span class="pl-c"><span class="pl-c">#</span> see https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html</span>
+
+wget https://github.com/deepfence/ThreatMapper/raw/master/deployment-scripts/docker-compose.yml
+docker-compose -f docker-compose.yml up --detach</pre>
