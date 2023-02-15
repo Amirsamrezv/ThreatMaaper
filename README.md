@@ -8,4 +8,15 @@ Deepfence ThreatMapper hunts for threats in your production platforms, and ranks
 
 With ThreatMapper's ThreatGraph visualization, you can then identify the issues that present the greatest risk to the security of your applications, and prioritize these for planned protection or remediation.
 
-<a href="/deepfence/ThreatMapper/raw/master/images/readme/threatmapper-threatgraph-full.jpg"><img src="/deepfence/ThreatMapper/raw/master/images/readme/threatmapper-threatgraph-thumb.jpg" border="0" align="center" style="max-width: 100%;"></a>
+![threatmapper-topology-thumb](https://user-images.githubusercontent.com/103250705/219166809-8e927633-3255-4ade-a05c-85206ac801a3.jpg)
+                                                 
+                                                 Learn the Topology	
+                                                 
+![threatmapper-vulnerabilities-thumb](https://user-images.githubusercontent.com/103250705/219167228-016423a8-f4ca-4752-9664-959cffc83fad.jpg)
+
+                                                  Identify Threats	
+                                                  
+![threatmapper-threatgraph-thumb](https://user-images.githubusercontent.com/103250705/219168366-fcbcb7fe-03ff-46dc-abcc-993581ed8002.jpg)
+
+                                                   Explore the ThreatGraph
+
