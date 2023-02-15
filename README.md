@@ -27,3 +27,49 @@ Use ThreatMapper to provide security observability for your production workloads
 Getting Started with ThreatMapper
 
 https://user-images.githubusercontent.com/103250705/219150606-e52cba70-8b69-4224-b3a2-6345ea15698e.mp4
+
+Planning your Deployment
+
+ThreatMapper consists of two components:
+
+The ThreatMapper Management Console is a container-based application that can be deployed on a single docker host or in a Kubernetes cluster.
+ThreatMapper monitors running infrastructure using agentless Cloud Scanner tasks and agent-based Sensor Agents
+
+The Management Console
+
+you deploy the managment console first, on a suitable docker host or kubernetes cluster. for Exmaple, On Docker 
+
+# Docker installation process for ThreatMapper Management Console
+sudo sysctl -w vm.max_map_count=262144 # see https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html
+
+wget https://github.com/deepfence/ThreatMapper/raw/master/deployment-scripts/docker-compose.yml
+docker-compose -f docker-compose.yml up --detach
+
+Once the Management Console is up and running, you can register an admin account and obtain an API key.
+
+Cloud Scanner tasks
+ThreatMapper Cloud Scanner tasks are responsible for querying the cloud provider APIs to gather configuration and identify deviations from compliance benchmarks.
+
+The task is deployed using a Terraform module. The ThreatMapper Management Console will present a basic configuration that may be deployed with Terraform, or you can refer to the expert configurations to fine-tune the deployment (AWS, Azure, GCP.
+
+Sensor Agents
+Install the sensor agents on your production or development platforms. The sensors report to the Management Console; they tell it what services they discover, provide telemetry and generate manifests of software dependencies.
+
+The following production platforms are supported by ThreatMapper sensor agents:
+
+Kubernetes: ThreatMapper sensors are deployed as a daemonset in the Kubernetes cluster, using a helm chart.
+Docker: ThreatMapper sensors are deployed as a lightweight container.
+Amazon ECS: ThreatMapper sensors are deployed as a daemon service using a task definition.
+AWS Fargate: ThreatMapper sensors are deployed as a sidecar container, using a task definition.
+Bare-Metal or Virtual Machines: ThreatMapper sensors are deployed within a lightweight Docker runtime.
+For example, run the following command to start the ThreatMapper sensor on a Docker host:
+
+docker run -dit --cpus=".2" --name=deepfence-agent --restart on-failure --pid=host --net=host --privileged=true \
+  -v /sys/kernel/debug:/sys/kernel/debug:rw -v /var/log/fenced -v /var/run/docker.sock:/var/run/docker.sock -v /:/fenced/mnt/host/:ro \
+  -e MGMT_CONSOLE_URL="---CONSOLE-IP---" -e MGMT_CONSOLE_PORT="443" -e DEEPFENCE_KEY="---DEEPFENCE-API-KEY---" -e USER_DEFINED_TAGS="" \
+  deepfenceio/deepfence_agent_ce:1.4.2
+  
+  On a Kubernetes platform, the sensors are installed using helm chart
+
+Next Steps
+Visit the Deepfence ThreatMapper Documentation, to learn how to get started and how to use ThreatMapper.
