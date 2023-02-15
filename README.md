@@ -69,3 +69,20 @@ The following production platforms are supported by ThreatMapper sensor agents:
 <li><a href="https://community.deepfence.io/docs/threatmapper/sensors/aws-ecs" rel="nofollow">Amazon ECS</a>: ThreatMapper sensors are deployed as a daemon service using a task definition.</li>
 <li><a href="https://community.deepfence.io/docs/threatmapper/sensors/aws-fargate" rel="nofollow">AWS Fargate</a>: ThreatMapper sensors are deployed as a sidecar container, using a task definition.</li>
 <li><a href="https://community.deepfence.io/docs/threatmapper/sensors/linux-host/" rel="nofollow">Bare-Metal or Virtual Machines</a>: ThreatMapper sensors are deployed within a lightweight Docker runtime.</li>
+
+For example, run the following command to start the ThreatMapper sensor on a Docker host:
+
+<pre>docker run -dit --cpus=<span class="pl-s"><span class="pl-pds">"</span>.2<span class="pl-pds">"</span></span> --name=deepfence-agent --restart on-failure --pid=host --net=host --privileged=true \
+  -v /sys/kernel/debug:/sys/kernel/debug:rw -v /var/log/fenced -v /var/run/docker.sock:/var/run/docker.sock -v /:/fenced/mnt/host/:ro \
+  -e MGMT_CONSOLE_URL=<span class="pl-s"><span class="pl-pds">"</span>---CONSOLE-IP---<span class="pl-pds">"</span></span> -e MGMT_CONSOLE_PORT=<span class="pl-s"><span class="pl-pds">"</span>443<span class="pl-pds">"</span></span> -e DEEPFENCE_KEY=<span class="pl-s"><span class="pl-pds">"</span>---DEEPFENCE-API-KEY---<span class="pl-pds">"</span></span> -e USER_DEFINED_TAGS=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> \
+  deepfenceio/deepfence_agent_ce:1.4.2</pre>
+  
+  <p dir="auto">On a Kubernetes platform, the sensors are installed using <a href="https://community.deepfence.io/docs/threatmapper/sensors/kubernetes/" rel="nofollow">helm chart</a></p>
+  
+# Next Steps
+<p dir="auto">Visit the <a href="https://community.deepfence.io/docs/threatmapper/" rel="nofollow">Deepfence ThreatMapper Documentation</a>, to learn how to get started and how to use ThreatMapper.</p>
+
+# Get in touch
+<p dir="auto">Thank you for using ThreatMapper.  Please feel welcome to participate in the <a href="/deepfence/ThreatMapper/blob/master/COMMUNITY.md">ThreatMapper Community</a>.</p>
+
+<a href="https://community.deepfence.io" rel="nofollow">Deepfence Community Website</a>
