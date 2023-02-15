@@ -20,3 +20,24 @@ With ThreatMapper's ThreatGraph visualization, you can then identify the issues 
 
                                                    Explore the ThreatGraph
 
+
+<a href="https://community.deepfence.io/docs/threatmapper/" rel="nofollow">Learn more about ThreatMapper</a>
+<a href="https://community.deepfence.io/docs/threatmapper/demo" rel="nofollow">See ThreatMapper running</a>
+
+
+# When to use ThreatMapper
+
+ThreatMapper carries on the good 'shift left' security practices that you already employ in your development pipelines. It continues to monitor running applications against emerging software vulnerabilities, and monitors the host and cloud configuration against industry-expert bnechmarks.
+
+Use ThreatMapper to provide security observability for your production workloads and infrastructure, across cloud, kubernetes, serverless (Fargate) and on-prem platforms.
+
+# Getting Started with ThreatMapper
+https://user-images.githubusercontent.com/103250705/219170188-b2e77c19-5396-4176-8601-cfa0d5a0f1c0.mp4
+
+# Planning your Deployment
+ThreatMapper consists of two components:
+
+The ThreatMapper Management Console is a container-based application that can be deployed on a single docker host or in a Kubernetes cluster.
+ThreatMapper monitors running infrastructure using agentless Cloud Scanner tasks and agent-based Sensor Agents
+
+<h3>The Management Console</h3>
