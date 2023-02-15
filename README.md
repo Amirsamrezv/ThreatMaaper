@@ -49,3 +49,10 @@ sudo sysctl -w vm.max_map_count=262144 <span class="pl-c"><span class="pl-c">#</
 
 wget https://github.com/deepfence/ThreatMapper/raw/master/deployment-scripts/docker-compose.yml
 docker-compose -f docker-compose.yml up --detach</pre>
+
+"Once the Management Console is up and running, you can"
+<a href="https://community.deepfence.io/docs/threatmapper/console/initial-configuration" rel="nofollow">register an admin account and obtain an API key</a>
+
+# Cloud Scanner tasks
+
+<p dir="auto">ThreatMapper <a href="https://community.deepfence.io/docs/threatmapper/cloudscanner/" rel="nofollow">Cloud Scanner tasks</a> are responsible for querying the cloud provider APIs to gather configuration and identify deviations from compliance benchmarks.</p>
