@@ -56,3 +56,16 @@ docker-compose -f docker-compose.yml up --detach</pre>
 # Cloud Scanner tasks
 
 <p dir="auto">ThreatMapper <a href="https://community.deepfence.io/docs/threatmapper/cloudscanner/" rel="nofollow">Cloud Scanner tasks</a> are responsible for querying the cloud provider APIs to gather configuration and identify deviations from compliance benchmarks.</p>
+
+<p dir="auto">The task is deployed using a Terraform module. The ThreatMapper Management Console will present a basic configuration that may be deployed with Terraform, or you can refer to the expert configurations to fine-tune the deployment (<a href="https://github.com/deepfence/terraform-aws-cloud-scanner">AWS</a>, <a href="https://github.com/deepfence/terraform-azure-cloud-scanner">Azure</a>, <a href="https://github.com/deepfence/terraform-gcp-cloud-scanner">GCP</a>.</p>
+
+# Sensor Agents
+<p dir="auto">Install the <a href="https://community.deepfence.io/docs/threatmapper/sensors/" rel="nofollow">sensor agents</a> on your production or development platforms. The sensors report to the Management Console; they tell it what services they discover, provide telemetry and generate manifests of software dependencies.</p>
+
+The following production platforms are supported by ThreatMapper sensor agents:
+
+<li><a href="https://community.deepfence.io/docs/threatmapper/sensors/kubernetes/" rel="nofollow">Kubernetes</a>: ThreatMapper sensors are deployed as a daemonset in the Kubernetes cluster, using a helm chart.</li>
+<li><a href="https://community.deepfence.io/docs/threatmapper/sensors/docker/" rel="nofollow">Docker</a>: ThreatMapper sensors are deployed as a lightweight container.</li>
+<li><a href="https://community.deepfence.io/docs/threatmapper/sensors/aws-ecs" rel="nofollow">Amazon ECS</a>: ThreatMapper sensors are deployed as a daemon service using a task definition.</li>
+<li><a href="https://community.deepfence.io/docs/threatmapper/sensors/aws-fargate" rel="nofollow">AWS Fargate</a>: ThreatMapper sensors are deployed as a sidecar container, using a task definition.</li>
+<li><a href="https://community.deepfence.io/docs/threatmapper/sensors/linux-host/" rel="nofollow">Bare-Metal or Virtual Machines</a>: ThreatMapper sensors are deployed within a lightweight Docker runtime.</li>
