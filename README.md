@@ -1,3 +1,3 @@
-![deepfence-logo](https://user-images.githubusercontent.com/103250705/219159119-53337076-ea03-49e4-9120-6470cce0bfd7.png)
-![threatmapper-threatgraph-thumb](https://user-images.githubusercontent.com/103250705/219159150-66a184c2-af44-4774-a94e-46f2438a7c6e.jpg)
+![deepfence-logo](https://user-images.githubusercontent.com/103250705/219159739-728f5831-8574-44ba-8fde-9f586f603ca2.png)
 
+<img style="width: 260px; height: 56px; max-width: 100%;" src="https://camo.githubusercontent.com/15601ee6af00a7c8022b2d0b0d5a3de1652ae7677db278ce164b4c18aa288c4c/68747470733a2f2f72756e616361702e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032332f30322f416e6e75616c5f524f53535f62616467655f626c61636b5f323032322e737667" alt="ROSS Index - Fastest Growing Open-Source Startups | Runa Capital" width="260" height="56" data-canonical-src="https://runacap.com/wp-content/uploads/2023/02/Annual_ROSS_badge_black_2022.svg">
