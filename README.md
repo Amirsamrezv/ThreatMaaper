@@ -86,3 +86,17 @@ For example, run the following command to start the ThreatMapper sensor on a Doc
 <p dir="auto">Thank you for using ThreatMapper.  Please feel welcome to participate in the <a href="/deepfence/ThreatMapper/blob/master/COMMUNITY.md">ThreatMapper Community</a>.</p>
 
 <a href="https://community.deepfence.io" rel="nofollow">Deepfence Community Website</a>
+
+ Got a question, need some help? Find the Deepfence team on Slack
+Got a feature request or found a bug? Raise an issue
+<a href="https://community.deepfence.io/docs/threatmapper/" rel="nofollow">Deepfence ThreatMapper Documentation</a>
+<li><a href="/deepfence/ThreatMapper/blob/master/SECURITY.md">productsecurity at deepfence dot io</a>: Found a security issue?  Share it in confidence</li>
+<li>Find out more at <a href="https://deepfence.io/" rel="nofollow">deepfence.io</a></li>
+
+# Security and Support
+<p dir="auto">For any security-related issues in the ThreatMapper project, contact <a href="/deepfence/ThreatMapper/blob/master/SECURITY.md">productsecurity <em>at</em> deepfence <em>dot</em> io</a>.</p>
+Hub issues as needed, and join the Deepfence Community <a href="https://join.slack.com/t/deepfence-community/shared_invite/zt-podmzle9-5X~qYx8wMaLt9bGWwkSdgQ" rel="nofollow">Slack channel</a>.</p>
+
+# License
+<p dir="auto">The Deepfence ThreatMapper project (this repository) is offered under the <a href="https://www.apache.org/licenses/LICENSE-2.0" rel="nofollow">Apache2 license</a>.</p>
+<p dir="auto"><a href="/deepfence/ThreatMapper/blob/master/CONTRIBUTING.md">Contributions</a> to Deepfence ThreatMapper project are similarly accepted under the Apache2 license, as per <a href="https://docs.github.com/en/github/site-policy/github-terms-of-service#6-contributions-under-repository-license">GitHub's inbound=outbound policy</a>.</p>
